@@ -1,18 +1,5 @@
-def are_valid_groups(students, groups):
-    
-    def inGroups(student, groups):
-        occurence = 0
-        for i in range(0, len(groups)):
-            for j in range(0, len(groups[0])):
-                if student == groups[i][j]:
-                    occurence += 1
-                if occurence > 1:
-                    return False
-        if occurence == 1:
-            return True
-        return False
-    
-    for student in students:
-        if inGroups(student, groups) == False:
+def are_valid_groups(student_numbers, groups):
+    for student in student_numbers:
+        if (not any(student in x for x in groups)):
             return False
     return True
