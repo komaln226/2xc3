@@ -4,4 +4,4 @@ def are_valid_group(studentNumber, groups):
         for y in groups:
             if x == y:
                 result = True 
-                return result 
+                return result
